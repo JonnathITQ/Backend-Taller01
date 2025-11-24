@@ -31,5 +31,5 @@ app.use((req,res,next)=>{
     //next(): permite que la solicitud continúe su flujo normal
     next();
 });
-app.use('/', CCI_routes);  
-module.exports= app;
+app.use('/', CCI_routes);  //Ruta base para acceder a las rutas definidas en CCI_routes
+module.exports= app; //Exportamos la app para que pueda ser usada en otras partes del código

@@ -23,15 +23,17 @@ var fs = require('fs');
 //variable Controlador
 var controller = {
 
-    home:function(req,res){
-        return res.status(200).send(
+    //Ruta para acceder a la página principal
+    home:function(req,res){ 
+        return res.status(200).send( //Retorna un mensaje de bienvenida
             "<h1>Hola, soy Alejandro</h1>"
         );
     },
 
-    saveTienda:function(req,res){
-        var tienda = new Tienda();
-        var params = req.body;
+    //Funcion para poder guardar una tienda en la base de datos
+    saveTienda:function(req,res){ 
+        var tienda = new Tienda(); //Creamos una nueva instancia de la tienda
+        var params = req.body; //Obtenemos los parámetros de toda la tienda
 
         tienda.nombre = params.nombre;
         tienda.descripcion = params.descripcion;
